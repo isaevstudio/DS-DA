@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+</head>
+<body>
+ <div class="login">
+ <h1>Credit Scoring</h1>
+<!-- Main Input For Receiving Query to our ML -->
+   
+<form action="/predict" method="post">
+
+<label>RevolvingUtilizationOfUnsecuredLines: </label>
+<input type="number" step="0.01" name="RevolvingUtilizationOfUnsecuredLines" placeholder="RevolvingUtilizationOfUnsecuredLines" required="required" />
+
+<br>
+
+<label>Age:</label>
+<input type="number" min="20" name="age" placeholder="Age" required="required" />
+
+<br>
+
+<label>NumberOfTime30-59DaysPastDueNotWorse: </label>
+<input type="number" name="NumberOfTime30-59DaysPastDueNotWorse" placeholder="NumberOfTime30-59DaysPastDueNotWorse" required="required" />
+  
+<br>
+
+<label>DebtRatio: </label>
+<input type="number" step="0.01" name="DebtRatio" placeholder="DebtRatio" required="required" />
+
+<br>
+
+<label>MonthlyIncome: </label>
+<input type="number" min="1" name="MonthlyIncome" placeholder="MonthlyIncome" required="required" />
+
+<br>
+
+<label>NumberOfOpenCreditLinesAndLoans: </label>
+<input type="number" name="NumberOfOpenCreditLinesAndLoans" placeholder="NumberOfOpenCreditLinesAndLoans" required="required" />
+
+<br>
+
+<label>NumberOfTimes90DaysLate: </label>
+<input type="number" name="NumberOfTimes90DaysLate" placeholder="NumberOfTimes90DaysLate" required="required" />
+
+<br>
+
+<label>NumberRealEstateLoansOrLines: </label>
+<input type="number" name="NumberRealEstateLoansOrLines" placeholder="NumberRealEstateLoansOrLines" required="required" />
+
+<br>
+
+<label>NumberOfTime60-89DaysPastDueNotWorse: </label>
+<input type="number" name="NumberOfTime60-89DaysPastDueNotWorse" placeholder="NumberOfTime60-89DaysPastDueNotWorse" required="required" />
+
+<br>
+
+<label>NumberOfDependents: </label>
+<input type="number" name="NumberOfDependents" placeholder="NumberOfDependents" required="required" />
+
+<br>
+
+
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+    </form>
+
+<br>
+    <br>
+    {{ prediction_text }}
+
+</div>
+
+
+</body>
+</html>
