@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+</head>
+<body>
+ <div class="login">
+ <h1>CUSTOMER CHURN PREDICTION</h1>
+<!-- Main Input For Receiving Query to our ML -->
+   
+<form action="/predict" method="post">
+
+<label for="gender">Gender: None </label>
+
+<select required name="gender" id="gender">
+  <option disabled selected>GENDER</option>
+
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+</select>
+
+<br>
+
+<label for="partner">Partner:</label>
+
+<select required name="partner" id="partner">
+    <option disabled selected>PARTNER</option>
+
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+</select>
+  
+<br>
+
+<label for="dependents">Dependents:</label>
+
+<select required name="dependents" id="dependents">
+    <option disabled selected>DEPENDENTS</option>
+
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+</select>
+
+<br>
+
+<input type="number" name="tenure" placeholder="Tenure" required="required" />
+
+<br>
+
+<label for="phoneservice">Phone Service:</label>
+
+<select required name="phoneservice" id="phoneservice">
+    <option disabled selected>PHONE SERVICE</option>
+
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+</select>
+
+
+<br>
+
+<label for="multiplelines">MultipleLines: None </label>
+
+<select required name="multiplelines" id="multiplelines">
+    <option disabled selected>MULTIPLELINES</option>
+
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    <option value="No phone service">No phone service</option>
+</select>
+
+<br>
+
+<label for="internetservice">Internet Service:</label>
+
+<select required name="internetservice" id="internetservice">
+    <option disabled selected>INTERNET SERVICE</option>
+
+    <option value="Fiber optic">Fiber optic</option>
+    <option value="DSL">DSL</option>
+    <option value="No">No</option>
+</select>
+
+<br>
+
+<label for="onlinesecurity">Online Security:</label>
+
+<select required name="onlinesecurity" id="onlinesecurity">
+    <option disabled selected>ONLINE SECURITY</option>
+
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    <option value="No internet service">No internet service</option>
+</select>
+
+<br>
+
+<label for="onlinebackup">Online Backup:</label>
+
+<select required name="onlinebackup" id="onlinebackup">
+    <option disabled selected>ONLINE BACKUP</option>
+
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    <option value="No internet service">No internet service</option>
+</select>
+
+<br>
+
+<label for="deviceprotection">Device Protection: None</label>
+
+<select required name="deviceprotection" id="deviceprotection">
+    <option disabled selected>DEVICE PROTECTION</option>
+
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    <option value="No internet service">No internet service</option>
+</select>
+
+<br>
+
+<label for="techsupport">Tech Support:</label>
+
+<select required name="techsupport" id="techsupport">
+    <option disabled selected>TECH-SUPPORT</option>
+
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    <option value="No internet service">No internet service</option>
+</select>
+
+<br>
+
+<label for="streamingtv">Streaming TV:</label>
+
+<select required name="streamingtv" id="streamingtv">
+    <option disabled selected>STREAMING TV</option>
+
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    <option value="No internet service">No internet service</option>
+</select>
+
+<br>
+
+<label for="streamingmovies">Streaming Movies:</label>
+
+<select required name="streamingmovies" id="streamingmovies">
+    <option disabled selected>STREAMING MOVIES</option>
+
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+    <option value="No internet service">No internet service</option>
+</select>
+
+<br>
+
+<label for="contract">Contract:</label>
+
+<select required name="contract" id="contract">
+    <option disabled selected>CONTRACT</option>
+
+    <option value="Month-to-month">Month-to-month</option>
+    <option value="Two year">Two year</option>
+    <option value="One year">One year</option>
+</select> 
+
+<br>
+
+<label for="paperlessbilling">Paperless Billing:</label>
+
+<select required name="paperlessbilling" id="paperlessbilling">
+    <option disabled selected>PAPERLESS BILLING</option>
+
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+</select> 
+
+<br>
+
+<label for="paymentmethod">Payment Method:</label>
+
+<select required name="paymentmethod" id="paymentmethod">
+    <option disabled selected>PAYMENT METHOD</option>
+    
+    <option value="Electronic check">Electronic check</option>
+    <option value="Mailed check">Mailed check</option>
+    <option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+    <option value="Credit card (automatic)">Credit card (automatic)</option>
+</select> 
+
+<br>
+
+<input type="number" name="monthlycharges" placeholder="Monthly Charges" required="required" />
+
+<br>
+
+<input type="number" name="totalcharges" placeholder="Total Charges" required="required" />
+
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+    </form>
+
+<br>
+    <br>
+    {{ prediction_text }}
+
+</div>
+</body>
+</html>
